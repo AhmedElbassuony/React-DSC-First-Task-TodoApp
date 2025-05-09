@@ -1,7 +1,5 @@
-import './App.css'
 import { createContext, useReducer } from "react";
-
-
+import TaskList from "./components/TaskList";
 const initialTodos = {
   filter: "All",
   data: [{
@@ -46,7 +44,7 @@ function App() {
   const [tasks, dispatch] = useReducer(reducer, initialTodos);
   return (
     <TaskProvider.Provider value={{ tasks: tasks, dispatch: dispatch }}>
-
+      <TaskList/>
     </TaskProvider.Provider>
   )
 }
