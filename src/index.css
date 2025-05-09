@@ -1,8 +1,10 @@
 :root {
+  box-sizing: border-box;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  margin: 0;
+  padding: 0;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -13,4 +15,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  margin-left: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.edit{
+  color: #3D90D7;
+}
+.edit:hover{
+  color: #3d8fd7c4;
+}
+.delete{
+  color: #FE4F2D;
+}
+.delete:hover{
+  color: #fe502da9;
+}
+
+p {
+  flex: 1;
+  margin: 0;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: #3D90D7;
+  background-color: #4b4b4b;
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+h1{
+  margin-left: 10px;
+}
+
+h4{
+  margin-left: 20px;
+}

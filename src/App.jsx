@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react";
 import TaskList from "./components/TaskList";
+import DateRepresenter from "./components/DateRepresenter";
 const initialTodos = {
   filter: "All",
   data: [{
@@ -25,6 +26,10 @@ const reducer = (state, action) => {
           return task;
         })
       }
+    case "remove":
+      return {
+        ...state, data: state.data.filter((_, index) => index !== action.idx)
+      }
     case "All":
       return { ...state, filter: "All" };
     case "Pending":
@@ -44,7 +49,9 @@ function App() {
   const [tasks, dispatch] = useReducer(reducer, initialTodos);
   return (
     <TaskProvider.Provider value={{ tasks: tasks, dispatch: dispatch }}>
-      <TaskList/>
+      <h1>Tasks</h1>
+      <h4><DateRepresenter /></h4>
+      <TaskList />
     </TaskProvider.Provider>
   )
 }

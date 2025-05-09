@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { TaskProvider } from "../App"
+import TaskItem from "./TaskItem";
 
 
 
@@ -21,11 +22,11 @@ const TaskList = () => {
       break;
   }
   return (
-    <ul>
+    <div>
       {
-        data.map((task, idx) => (<li key={idx}>{task.task}</li>))
+        data.map(({ task, done }, idx) => (<TaskItem key={idx} task={task} done={done} index={idx} />))
       }
-    </ul>
+    </div>
   )
 };
 
