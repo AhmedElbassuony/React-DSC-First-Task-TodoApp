@@ -3,12 +3,12 @@ import { TaskProvider } from "../App";
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const TaskItem = ({ task, done, index }) => {
+const TaskItem = ({ task, done, id }) => {
   const { dispatch } = useContext(TaskProvider);
 
 
   const onCheck = () => {
-    dispatch({ type: "toggle", idx: index });
+    dispatch({ type: "toggle", idx: id });
   }
   return (
     <div style={{
@@ -22,7 +22,7 @@ const TaskItem = ({ task, done, index }) => {
       <input type="checkbox" checked={done} onChange={onCheck} />
       <p>{task}</p>
       <button className="edit"><FaRegEdit /></button>
-      <button className="delete" onClick={() => dispatch({ type: "remove", idx: index })}><RiDeleteBin6Line /></button>
+      <button className="delete" onClick={() => dispatch({ type: "remove", idx: id })}><RiDeleteBin6Line /></button>
     </div>
   )
 };

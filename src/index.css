@@ -24,16 +24,19 @@ button {
   transition: 0.3s;
 }
 
-.edit{
+.edit {
   color: #3D90D7;
 }
-.edit:hover{
+
+.edit:hover {
   color: #3d8fd7c4;
 }
-.delete{
+
+.delete {
   color: #FE4F2D;
 }
-.delete:hover{
+
+.delete:hover {
   color: #fe502da9;
 }
 
@@ -47,16 +50,36 @@ p {
   background-color: #4b4b4b;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 10px;
 }
 
-h1{
+h1 {
   margin-left: 10px;
 }
 
-h4{
+h4 {
   margin-left: 20px;
+}
+
+.filter-bar {
+  margin-left: auto;
+  width: fit-content;
+  background-color: #4b4b4b;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.filter-bar button {
+  margin: 0;
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
+.filter-bar button.active, .filter-bar button:hover{
+  background-color: #3D90D7;
+
 }
