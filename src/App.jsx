@@ -101,6 +101,10 @@ function App() {
     <TaskProvider.Provider value={{ tasks: tasks, dispatch: dispatch }}>
       <h1>Tasks</h1>
       <h4><DateRepresenter /></h4>
+      <div className="search">
+        <input type="search" />
+        <button>Search</button>
+      </div>
       <div style={{ textAlign: "right" }}><FilterBar /></div>
       <TaskList />
       <button className="open" onClick={open}>+</button>

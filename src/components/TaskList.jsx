@@ -62,10 +62,10 @@ const TaskList = () => {
       }
       <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close} __demoMode>
         <form onSubmit={submitHandler}>
-          <h1>Create New Task</h1>
+          <h1>Edit {task.task}</h1>
           <div>
             <input type="text" name="task" value={task.task} onChange={changeHandler} />
-            <button>Add Task</button>
+            <button>Edit Task</button>
           </div>
           {error ? (<p className="error">{error}</p>) : null}
         </form>

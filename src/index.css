@@ -79,10 +79,12 @@ h4 {
   padding: 10px 30px;
 }
 
-.filter-bar button.active,
-.filter-bar button:hover {
+.filter-bar button.active {
   background-color: #3D90D7;
+}
 
+.filter-bar button:hover {
+  background-color: #3176b1;
 }
 
 .open {
@@ -112,32 +114,63 @@ form {
   padding: 20px;
   width: 400px;
   border-radius: 20px;
-  h1{
+
+  h1 {
     margin: 0;
     margin-bottom: 30px;
   }
-  input{
+
+  input {
     padding: 10px;
     border-radius: 10px;
     outline: none;
     border: none;
     font-size: 20px;
   }
-  div{
+
+  div {
     display: flex;
     justify-content: space-between;
   }
-  button{
+
+  button {
     background-color: #4b4b4b;
     padding: 10px;
     border-radius: 5px;
   }
-  button:hover{
+
+  button:hover {
     background-color: #4b4b4ba1;
   }
-  p{
+
+  p {
     background-color: transparent;
     margin-top: 10px;
     color: #FE4F2D;
   }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+.search button {
+  background-color: #3D90D7;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+.search button:hover {
+  background-color: #3176b1;
 }
